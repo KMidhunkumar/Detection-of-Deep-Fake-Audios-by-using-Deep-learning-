@@ -1,0 +1,154 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Deep Fake Audio Detection</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="/static/css/templatemo-ebook-landing.css" rel="stylesheet">
+
+        
+<!--
+
+TemplateMo 588 ebook landing
+
+https://templatemo.com/tm-588-ebook-landing
+
+-->
+    </head>
+    
+    <body>
+
+        <main>
+
+
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand" href="{{url_for('index')}}">
+                            <i class="navbar-brand-icon bi-book me-2"></i>
+                            <span>Deep Fake Audio Detection</span>
+                        </a>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-lg-auto me-lg-4">
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{{url_for('index')}}">Home</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{{url_for('register')}}">Registration</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link click-scroll" href="{{url_for('login')}}">LogIn</a>
+                                </li>
+
+                                
+                            </ul>
+
+                            
+                        </div>
+                    </div>
+                </nav>
+
+
+            
+                <section class="contact-section section-padding" id="section_5">
+                    <div class="container">
+                        <div class="row">
+            
+                            <div class="col-lg-5 col-12 mx-auto">
+                                <form class="custom-form ebook-download-form bg-white shadow" action="{{url_for('login')}}" method="post" role="form">
+                                    <div class="text-center mb-5">
+                                        <h2 class="mb-1">LogIn</h2>
+                                    </div>
+            
+                                    <div class="ebook-download-form-body">
+            
+                                        <div class="input-group mb-4">
+                                            <input type="email" name="email" id="ebook-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="your@company.com" aria-label="ebook-form-email" aria-describedby="basic-addon2" required="">
+            
+                                            <span class="input-group-text" id="basic-addon2">
+                                                <i class="custom-form-icon bi-envelope"></i>
+                                            </span>
+                                        </div>
+            
+                                        <div class="input-group mb-4">
+                                            <input type="password" name="password" id="ebook-form-name" class="form-control" aria-label="ebook-form-name" aria-describedby="basic-addon1" placeholder="Your password" required>
+            
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <i class="custom-form-icon bi-person"></i>
+                                            </span>
+                                        </div>
+            
+                                        <div class="col-lg-8 col-md-10 col-8 mx-auto">
+                                            <button type="submit" class="form-control">LogIn</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+            
+                            <div style="margin-top: 200px;" class="col-lg-6 col-12">
+            
+                                <h2 class="mb-4">Deep Fake Audio Detection</h2>
+            
+                                <p>Don't have an account? 
+                                    <a href="{{url_for('login')}}" class="contact-link">
+                                        <u>Register</u>
+                                    </a>
+                                </p>
+                            </div>
+            
+                        </div>
+                    </div>
+                </section>
+
+
+        </main>
+
+        {% if message %}
+            <script>
+                alert("{{ message }}")        
+            </script>
+        {% endif %}
+
+        <script src="/static/js/jquery.min.js"></script>
+        <script src="/static/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/js/jquery.sticky.js"></script>
+        <script src="/static/js/click-scroll.js"></script>
+        <script src="/static/js/custom.js"></script>
+
+    </body>
+</html>
